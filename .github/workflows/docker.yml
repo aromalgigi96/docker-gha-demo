@@ -1,11 +1,10 @@
-name: Build and Push Docker Image
+name: Build, Push, and Run Docker Image
 
 on:
   push:
-    branches: [ main ]   # or [ master ] if your default branch is master
-
+    branches: [ main ]  
 jobs:
-  build-and-push:
+  build-push-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,3 +24,9 @@ jobs:
         run: |
           docker build -t aromalgigi9/hello-docker-demo:latest .
           docker push aromalgigi9/hello-docker-demo:latest
+
+      - name: Pull image from Docker Hub
+        run: docker pull aromalgigi9/hello-docker-demo:latest
+
+      - name: Run Docker container and show message
+        run: docker run aromalgigi9/hello-docker-demo:latest
