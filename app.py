@@ -1,5 +1,5 @@
 def create_message(name):
-    return f"Hello, {name}! Welcome to automated DevOps with Docker and GitHub Actions."
+    return f"Hello, {name}."
 
 def main():
     user = "DevOps Student"
