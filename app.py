@@ -1,5 +1,5 @@
 def create_message(name):
-    return f"Hello, {name}."
+    return f"Hello, {name} Student."
 
 def main():
     user = "DevOps Student"
